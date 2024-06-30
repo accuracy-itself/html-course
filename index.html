@@ -3,19 +3,55 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Page Title</title>
+    <title>Alena's best book store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <script src="https://kit.fontawesome.com/2790981948.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header></header>
+    <header>
+      <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
+          </defs>
+          <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(211, 48, 48,0.7)" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(211, 48, 48,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(211, 48, 48,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(211, 48, 48,0.1)" />
+          </g>
+        </svg>
+      </div>
+      <h1>Alena's best book store</h1>
+    </header>
 
     <main>
       <div class="main-content">
+        <div class="filtration">
+          <div class="filtration__radio-filters">
+            <div class="filtration__radio-filter filter-selected" data-filter="all">
+              All
+            </div>
+            <div class="filtration__radio-filter" data-filter="favourite">
+              Favourites
+            </div>
+            <div class="filtration__radio-filter" data-filter="comparison">
+              Comparison
+            </div>
+          </div>
+          <div class="filtration__check-filters">
+            <div class="filtration__check-filter">
+              <input type="checkbox" id="showhidden" name="showhidden" checked/>
+              <label for="showhidden">Show hidden</label>
+            </div>
+          </div>
+        </div>
+
         <div class="catalog">
-          <div class="catalog-item">
+          <div class="catalog-item" id="1">
             <div class="catalog-item__content">
               <img
                 class="catalog-item__cover"
@@ -38,14 +74,23 @@
                 <button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button>
               </div>
               <div class="catalog-item__icons">
-                <div class="catalog-item__icons__icon show-hide"><i class="fa-regular fa-eye"></i></div>
-                <div class="catalog-item__icons__icon favourites"><i class="fa-regular fa-heart"></i></div>
-                <div class="catalog-item__icons__icon comparison"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div class="catalog-item__icons__icon show-hide">
+                  <i class="fa-regular fa-eye"></i>
+                  <div class="show-hide-text">Hide</div>
+                </div>
+                <div class="catalog-item__icons__icon favourites">
+                  <i class="fa-regular fa-heart"></i>
+                  <div class="favourites-text">Favourite</div>
+                </div>
+                <div class="catalog-item__icons__icon comparison">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  <div class="comparison-text">Compare</div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="catalog-item">
+          <div class="catalog-item" id="2">
             <div class="catalog-item__content">
               <img
                 class="catalog-item__cover"
@@ -68,16 +113,25 @@
                 <button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button>
               </div>
               <div class="catalog-item__icons">
-                <div class="catalog-item__icons__icon show-hide"><i class="fa-regular fa-eye"></i></div>
-                <div class="catalog-item__icons__icon favourites"><i class="fa-regular fa-heart"></i></div>
-                <div class="catalog-item__icons__icon comparison"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div class="catalog-item__icons__icon show-hide">
+                  <i class="fa-regular fa-eye"></i>
+                  <div class="show-hide-text">Hide</div>
+                </div>
+                <div class="catalog-item__icons__icon favourites">
+                  <i class="fa-regular fa-heart"></i>
+                  <div class="favourites-text">Favourite</div>
+                </div>
+                <div class="catalog-item__icons__icon comparison">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  <div class="comparison-text">Compare</div>
+                </div>
               </div>
               
             </div>
             <!-- <button class="catalog-item__btn-add">Add to cart</button> -->
           </div>
 
-          <div class="catalog-item">
+          <div class="catalog-item" id="3">
             <div class="catalog-item__content">
               <img
                 class="catalog-item__cover"
@@ -100,15 +154,24 @@
                 <button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button>
               </div>
               <div class="catalog-item__icons">
-                <div class="catalog-item__icons__icon show-hide"><i class="fa-regular fa-eye"></i></div>
-                <div class="catalog-item__icons__icon favourites"><i class="fa-regular fa-heart"></i></div>
-                <div class="catalog-item__icons__icon comparison"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div class="catalog-item__icons__icon show-hide">
+                  <i class="fa-regular fa-eye"></i>
+                  <div class="show-hide-text">Hide</div>
+                </div>
+                <div class="catalog-item__icons__icon favourites">
+                  <i class="fa-regular fa-heart"></i>
+                  <div class="favourites-text">Favourite</div>
+                </div>
+                <div class="catalog-item__icons__icon comparison">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  <div class="comparison-text">Compare</div>
+                </div>
               </div>
             </div>
             <!-- <button class="catalog-item__btn-add">Add to cart</button> -->
           </div>
 
-          <div class="catalog-item">
+          <div class="catalog-item" id="4">
             <div class="catalog-item__content">
               <img
                 class="catalog-item__cover"
@@ -131,15 +194,24 @@
                 <button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button>
               </div>
               <div class="catalog-item__icons">
-                <div class="catalog-item__icons__icon show-hide"><i class="fa-regular fa-eye"></i></div>
-                <div class="catalog-item__icons__icon favourites"><i class="fa-regular fa-heart"></i></div>
-                <div class="catalog-item__icons__icon comparison"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div class="catalog-item__icons__icon show-hide">
+                  <i class="fa-regular fa-eye"></i>
+                  <div class="show-hide-text">Hide</div>
+                </div>
+                <div class="catalog-item__icons__icon favourites">
+                  <i class="fa-regular fa-heart"></i>
+                  <div class="favourites-text">Favourite</div>
+                </div>
+                <div class="catalog-item__icons__icon comparison">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  <div class="comparison-text">Compare</div>
+                </div>
               </div>
             </div>
             <!-- <button class="catalog-item__btn-add">Add to cart</button> -->
           </div>
 
-          <div class="catalog-item">
+          <div class="catalog-item" id="5">
             <div class="catalog-item__content">
               <img
                 class="catalog-item__cover"
@@ -162,15 +234,24 @@
                 <button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button>
               </div>
               <div class="catalog-item__icons">
-                <div class="catalog-item__icons__icon show-hide"><i class="fa-regular fa-eye"></i></div>
-                <div class="catalog-item__icons__icon favourites"><i class="fa-regular fa-heart"></i></div>
-                <div class="catalog-item__icons__icon comparison"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div class="catalog-item__icons__icon show-hide">
+                  <i class="fa-regular fa-eye"></i>
+                  <div class="show-hide-text">Hide</div>
+                </div>
+                <div class="catalog-item__icons__icon favourites">
+                  <i class="fa-regular fa-heart"></i>
+                  <div class="favourites-text">Favourite</div>
+                </div>
+                <div class="catalog-item__icons__icon comparison">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  <div class="comparison-text">Compare</div>
+                </div>
               </div>
             </div>
             <!-- <button class="catalog-item__btn-add">Add to cart</button> -->
           </div>
 
-          <div class="catalog-item">
+          <div class="catalog-item" id="6">
             <div class="catalog-item__content">
               <img
                 class="catalog-item__cover"
@@ -193,15 +274,24 @@
                 <button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button>
               </div>
               <div class="catalog-item__icons">
-                <div class="catalog-item__icons__icon show-hide"><i class="fa-regular fa-eye"></i></div>
-                <div class="catalog-item__icons__icon favourites"><i class="fa-regular fa-heart"></i></div>
-                <div class="catalog-item__icons__icon comparison"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div class="catalog-item__icons__icon show-hide">
+                  <i class="fa-regular fa-eye"></i>
+                  <div class="show-hide-text">Hide</div>
+                </div>
+                <div class="catalog-item__icons__icon favourites">
+                  <i class="fa-regular fa-heart"></i>
+                  <div class="favourites-text">Favourite</div>
+                </div>
+                <div class="catalog-item__icons__icon comparison">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  <div class="comparison-text">Compare</div>
+                </div>
               </div>
             </div>
             <!-- <button class="catalog-item__btn-add">Add to cart</button> -->
           </div>
 
-          <div class="catalog-item">
+          <div class="catalog-item" id="7">
             <div class="catalog-item__content">
               <img
                 class="catalog-item__cover"
@@ -224,9 +314,258 @@
                 <button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button>
               </div>
               <div class="catalog-item__icons">
-                <div class="catalog-item__icons__icon show-hide"><i class="fa-regular fa-eye"></i></div>
-                <div class="catalog-item__icons__icon favourites"><i class="fa-regular fa-heart"></i></div>
-                <div class="catalog-item__icons__icon comparison"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div class="catalog-item__icons__icon show-hide">
+                  <i class="fa-regular fa-eye"></i>
+                  <div class="show-hide-text">Hide</div>
+                </div>
+                <div class="catalog-item__icons__icon favourites">
+                  <i class="fa-regular fa-heart"></i>
+                  <div class="favourites-text">Favourite</div>
+                </div>
+                <div class="catalog-item__icons__icon comparison">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  <div class="comparison-text">Compare</div>
+                </div>
+              </div>
+            </div>
+            <!-- <button class="catalog-item__btn-add">Add to cart</button> -->
+          </div>
+
+          <div class="catalog-item" id="8">
+            <div class="catalog-item__content">
+              <img
+                class="catalog-item__cover"
+                src="./resources/images/my-book-cover.jpg"
+                alt="dark is the way"
+              />
+              <div class="catalog-item__content-description">
+                <div class="catalog-item__category">Science</div>
+                <div class="catalog-item__raiting">
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                </div>
+                <div class="catalog-item__title">My book Cover. Secrets in a Silicon Valley Startup</div>
+                <div class="catalog-item__price">$30</div>
+              </div>
+              <div class="catalog-item__btn-add">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button>
+              </div>
+              <div class="catalog-item__icons">
+                <div class="catalog-item__icons__icon show-hide">
+                  <i class="fa-regular fa-eye"></i>
+                  <div class="show-hide-text">Hide</div>
+                </div>
+                <div class="catalog-item__icons__icon favourites">
+                  <i class="fa-regular fa-heart"></i>
+                  <div class="favourites-text">Favourite</div>
+                </div>
+                <div class="catalog-item__icons__icon comparison">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  <div class="comparison-text">Compare</div>
+                </div>
+              </div>
+            </div>
+            <!-- <button class="catalog-item__btn-add">Add to cart</button> -->
+          </div>
+
+          <div class="catalog-item" id="9">
+            <div class="catalog-item__content">
+              <img
+                class="catalog-item__cover"
+                src="./resources/images/dark-is-the-way.jpg"
+                alt="dark is the way"
+              />
+              <div class="catalog-item__content-description">
+                <div class="catalog-item__category">Fantasy</div>
+                <div class="catalog-item__raiting">
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                </div>
+                <div class="catalog-item__title">Dark is the Way</div>
+                <div class="catalog-item__price">$30</div>
+              </div>
+              <div class="catalog-item__btn-add">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button>
+              </div>
+              <div class="catalog-item__icons">
+                <div class="catalog-item__icons__icon show-hide">
+                  <i class="fa-regular fa-eye"></i>
+                  <div class="show-hide-text">Hide</div>
+                </div>
+                <div class="catalog-item__icons__icon favourites">
+                  <i class="fa-regular fa-heart"></i>
+                  <div class="favourites-text">Favourite</div>
+                </div>
+                <div class="catalog-item__icons__icon comparison">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  <div class="comparison-text">Compare</div>
+                </div>
+              </div>
+            </div>
+            <!-- <button class="catalog-item__btn-add">Add to cart</button> -->
+          </div>
+
+          <div class="catalog-item" id="10">
+            <div class="catalog-item__content">
+              <img
+                class="catalog-item__cover"
+                src="./resources/images/dark-is-the-way.jpg"
+                alt="dark is the way"
+              />
+              <div class="catalog-item__content-description">
+                <div class="catalog-item__category">Fantasy</div>
+                <div class="catalog-item__raiting">
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                </div>
+                <div class="catalog-item__title">Dark is the Way</div>
+                <div class="catalog-item__price">$30</div>
+              </div>
+              <div class="catalog-item__btn-add">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button>
+              </div>
+              <div class="catalog-item__icons">
+                <div class="catalog-item__icons__icon show-hide">
+                  <i class="fa-regular fa-eye"></i>
+                  <div class="show-hide-text">Hide</div>
+                </div>
+                <div class="catalog-item__icons__icon favourites">
+                  <i class="fa-regular fa-heart"></i>
+                  <div class="favourites-text">Favourite</div>
+                </div>
+                <div class="catalog-item__icons__icon comparison">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  <div class="comparison-text">Compare</div>
+                </div>
+              </div>
+            </div>
+            <!-- <button class="catalog-item__btn-add">Add to cart</button> -->
+          </div>
+
+          <div class="catalog-item" id="11">
+            <div class="catalog-item__content">
+              <img
+                class="catalog-item__cover"
+                src="./resources/images/dark-is-the-way.jpg"
+                alt="dark is the way"
+              />
+              <div class="catalog-item__content-description">
+                <div class="catalog-item__category">Fantasy</div>
+                <div class="catalog-item__raiting">
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                </div>
+                <div class="catalog-item__title">Dark is the Way</div>
+                <div class="catalog-item__price">$30</div>
+              </div>
+              <div class="catalog-item__btn-add">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button>
+              </div>
+              <div class="catalog-item__icons">
+                <div class="catalog-item__icons__icon show-hide">
+                  <i class="fa-regular fa-eye"></i>
+                  <div class="show-hide-text">Hide</div>
+                </div>
+                <div class="catalog-item__icons__icon favourites">
+                  <i class="fa-regular fa-heart"></i>
+                  <div class="favourites-text">Favourite</div>
+                </div>
+                <div class="catalog-item__icons__icon comparison">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  <div class="comparison-text">Compare</div>
+                </div>
+              </div>
+            </div>
+            <!-- <button class="catalog-item__btn-add">Add to cart</button> -->
+          </div>
+
+          <div class="catalog-item" id="12">
+            <div class="catalog-item__content">
+              <img
+                class="catalog-item__cover"
+                src="./resources/images/my-book-cover.jpg"
+                alt="dark is the way"
+              />
+              <div class="catalog-item__content-description">
+                <div class="catalog-item__category">Science</div>
+                <div class="catalog-item__raiting">
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                </div>
+                <div class="catalog-item__title">My book Cover. Secrets in a Silicon Valley Startup</div>
+                <div class="catalog-item__price">$30</div>
+              </div>
+              <div class="catalog-item__btn-add">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button>
+              </div>
+              <div class="catalog-item__icons">
+                <div class="catalog-item__icons__icon show-hide">
+                  <i class="fa-regular fa-eye"></i>
+                  <div class="show-hide-text">Hide</div>
+                </div>
+                <div class="catalog-item__icons__icon favourites">
+                  <i class="fa-regular fa-heart"></i>
+                  <div class="favourites-text">Favourite</div>
+                </div>
+                <div class="catalog-item__icons__icon comparison">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  <div class="comparison-text">Compare</div>
+                </div>
+              </div>
+            </div>
+            <!-- <button class="catalog-item__btn-add">Add to cart</button> -->
+          </div>
+
+          <div class="catalog-item" id="13">
+            <div class="catalog-item__content">
+              <img
+                class="catalog-item__cover"
+                src="./resources/images/my-book-cover.jpg"
+                alt="dark is the way"
+              />
+              <div class="catalog-item__content-description">
+                <div class="catalog-item__category">Science</div>
+                <div class="catalog-item__raiting">
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="catalog-item__raiting-star"><i class="fa-regular fa-star"></i></div>
+                </div>
+                <div class="catalog-item__title">My book Cover. Secrets in a Silicon Valley Startup</div>
+                <div class="catalog-item__price">$30</div>
+              </div>
+              <div class="catalog-item__btn-add">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button>
+              </div>
+              <div class="catalog-item__icons">
+                <div class="catalog-item__icons__icon show-hide">
+                  <i class="fa-regular fa-eye"></i>
+                  <div class="show-hide-text">Hide</div>
+                </div>
+                <div class="catalog-item__icons__icon favourites">
+                  <i class="fa-regular fa-heart"></i>
+                  <div class="favourites-text">Favourite</div>
+                </div>
+                <div class="catalog-item__icons__icon comparison">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  <div class="comparison-text">Compare</div>
+                </div>
               </div>
             </div>
             <!-- <button class="catalog-item__btn-add">Add to cart</button> -->

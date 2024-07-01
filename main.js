@@ -21,20 +21,9 @@ function toggleItemFilter(itemId, className, filterArray) {
     }
   } else {
     tile.classList.add(className);
-    if (!filterHidden.checked) {
-      tile.classList.add("hidden");
-    }
     filterArray.push(itemId);
   }
 }
-
-// function addIconListener(icon, className) {
-//   icon.addEventListener("click", function () {
-//     const itemId = this.closest(".catalog-item").id;
-//     toggleItemFilter(itemId, className, hiddenItems);
-//     this.closest(".catalog-item__icons__icon").classList.toggle("icon-active");
-//   });
-// }
 
 function clickIcon(target, className, array) {
   const itemId = target.closest(".catalog-item").id;
@@ -52,7 +41,6 @@ function changeHidden(checked) {
       item.classList.remove("hidden");
     } else if (!checked && item.classList.contains("transparent")) {
       item.classList.add("hidden");
-      hiddenItems.push(item.id);
     }
   });
 }
@@ -121,7 +109,7 @@ function updateTiles(array, itemClassName, iconClassName) {
 }
 
 document
-  .querySelectorAll(".catalog-item__icons__icon.show-hide i")
+  .querySelectorAll(".catalog-item__icons__icon.show-hide")
   .forEach((icon) => {
     icon.addEventListener("click", function () {
       clickIcon(this, "transparent", hiddenItems);
@@ -129,7 +117,7 @@ document
   });
 
 document
-  .querySelectorAll(".catalog-item__icons__icon.favourites i")
+  .querySelectorAll(".catalog-item__icons__icon.favourites")
   .forEach((icon) => {
     icon.addEventListener("click", function () {
       clickIcon(this, "favourite", favouriteItems);
@@ -137,7 +125,7 @@ document
   });
 
 document
-  .querySelectorAll(".catalog-item__icons__icon.comparison i")
+  .querySelectorAll(".catalog-item__icons__icon.comparison")
   .forEach((icon) => {
     icon.addEventListener("click", function () {
       clickIcon(this, "comparison", comparisonItems);
